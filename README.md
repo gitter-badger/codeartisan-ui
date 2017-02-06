@@ -1,2 +1,2 @@
-# material-design
+# CodeArtisan-UI
 Full collection of UI components written with jQuery and inspired by Material Design Lite.
