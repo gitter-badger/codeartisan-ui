@@ -1,28 +1,4 @@
-@import "../components/color-definitions";
-
-// ==========  Color Theme  ========== //
-$color-dark-contrast: $color-black !default;
-$color-light-contrast: $color-white !default;
-//Primary color
-$color-primary: $palette-cyan-600 !default;
-$color-primary-hue-1: $palette-cyan-400 !default;
-$color-primary-hue-2: $palette-cyan-700 !default;
-$color-primary-hue-3: $palette-cyan-A100 !default;
-//Accent color
-$color-accent: $palette-purple-500 !default;
-$color-accent-hue-1: $palette-purple-400 !default;
-$color-accent-hue-2: $palette-purple-700 !default;
-$color-accent-hue-3: $palette-purple-A100 !default;
-// Our primary is dark, so use $color-dark-contrast for overlaid text.
-$color-primary-contrast: $color-light-contrast !default;
-// Our accent is dark, so use $color-dark-contrast for overlaid text.
-$color-accent-contrast: $color-light-contrast !default;
-
-
-
-
-
-
+@import "color-theme";
 // ==========  Buttons  ========== //
 $button-min-width: 88px ;
 $button-height: 36px;
@@ -109,9 +85,3 @@ $button-fab-ripple-color-alt: unquote("rgb(#{$color-accent-contrast})") !default
 // Icon button colors and sizes.
 $button-icon-color: unquote("rgb(#{$palette-grey-700})") !default;
 $button-icon-focus-color: $button-focus-color !default;
-
-// ==========  Shadow  ========== //
-
-$shadow-key-umbra-opacity: 0.2 !default;
-$shadow-key-penumbra-opacity: 0.14 !default;
-$shadow-ambient-shadow-opacity: 0.12 !default;

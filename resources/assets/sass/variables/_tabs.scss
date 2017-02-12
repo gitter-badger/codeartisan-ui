@@ -1,0 +1,11 @@
+@import "color-theme";
+
+// ==========  Tabs  ========== //
+
+$layout-header-tab-highlight: unquote("rgb(#{$color-accent})") !default;
+$tab-highlight-color: unquote("rgb(#{$color-accent})") !default;
+$tab-text-color: unquote("rgba(#{$color-black}, 0.54)") !default;
+$tab-active-text-color: unquote("rgba(#{$color-accent}, 0.87)") !default;
+$tab-light-active-text-color: #FFF !default;
+$tab-border-color: unquote("rgb(#{$palette-grey-300})") !default;
+

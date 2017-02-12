@@ -1,0 +1,214 @@
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+//helper classes for margin and padding
+.layout-m-t-0{
+  margin-top: 0 !important;
+}
+@for $i from 1 to 4 {
+  @include layout-margin($i, top);
+  @include layout-margin($i, bottom);
+  @include layout-margin($i, left);
+  @include layout-margin($i, right);
+}
+@for $i from 1 to 4 {
+  @include layout-padding($i, top);
+  @include layout-padding($i, bottom);
+  @include layout-padding($i, left);
+  @include layout-padding($i, right);
+}
+//hidden class
+@include responsive-hidden('.hidden');
+
+//layout-xs
+@media (max-width: $screen-phone-breakpoint - 1px)
+{
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'xs');
+    @include layout-margin($i, bottom,true,'xs');
+    @include layout-margin($i, left,true, 'xs');
+    @include layout-margin($i, right, true, 'xs');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'gt-xs');
+    @include layout-padding($i, bottom, true, 'gt-xs');
+    @include layout-padding($i, left, true, 'gt-xs');
+    @include layout-padding($i, right,true, 'gt-xs');
+  }
+  @include responsive-hidden('.hidden--xs');
+}
+
+//layout-gt-xs
+@media (min-width: $screen-phone-breakpoint) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'gt-xs');
+    @include layout-margin($i, bottom,true,'gt-xs');
+    @include layout-margin($i, left,true, 'gt-xs');
+    @include layout-margin($i, right, true, 'gt-xs');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'gt-xs');
+    @include layout-padding($i, bottom, true, 'gt-xs');
+    @include layout-padding($i, left, true, 'gt-xs');
+    @include layout-padding($i, right,true, 'gt-xs');
+  }
+  @include responsive-hidden('.hidden--gt-xs');
+}
+
+//layout-sm
+@media (min-width: $screen-phone-breakpoint) and (max-width: $screen-tablet-breakpoint - 1px) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'sm');
+    @include layout-margin($i, bottom,true,'sm');
+    @include layout-margin($i, left,true, 'sm');
+    @include layout-margin($i, right, true, 'sm');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'sm');
+    @include layout-padding($i, bottom, true, 'sm');
+    @include layout-padding($i, left, true, 'sm');
+    @include layout-padding($i, right,true, 'sm');
+  }
+  @include responsive-hidden('.hidden-sm');
+}
+
+//layout-gt-sm
+@media (min-width: $screen-tablet-breakpoint) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'gt-sm');
+    @include layout-margin($i, bottom,true,'gt-sm');
+    @include layout-margin($i, left,true, 'gt-sm');
+    @include layout-margin($i, right, true, 'gt-sm');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'gt-sm');
+    @include layout-padding($i, bottom, true, 'gt-sm');
+    @include layout-padding($i, left, true, 'gt-sm');
+    @include layout-padding($i, right,true, 'gt-sm');
+  }
+  @include responsive-hidden('.hidden--gt-sm');
+}
+
+//layout-lt-sm
+@media (max-width: $screen-tablet-breakpoint - 1px) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'lt-sm');
+    @include layout-margin($i, bottom,true,'lt-sm');
+    @include layout-margin($i, left,true, 'lt-sm');
+    @include layout-margin($i, right, true, 'lt-sm');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'lt-sm');
+    @include layout-padding($i, bottom, true, 'lt-sm');
+    @include layout-padding($i, left, true, 'lt-sm');
+    @include layout-padding($i, right,true, 'lt-sm');
+  }
+  @include responsive-hidden('.hidden--lt-sm');
+}
+
+//layout-md
+@media (min-width: $screen-tablet-breakpoint) and (max-width: $screen-desktop-breakpoint - 1px) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'md');
+    @include layout-margin($i, bottom,true,'md');
+    @include layout-margin($i, left,true, 'md');
+    @include layout-margin($i, right, true, 'md');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'md');
+    @include layout-padding($i, bottom, true, 'md');
+    @include layout-padding($i, left, true, 'md');
+    @include layout-padding($i, right,true, 'md');
+  }
+  @include responsive-hidden('.hidden--md');
+}
+
+
+//layout-gt-md
+@media (min-width: $screen-desktop-breakpoint) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'gt-md');
+    @include layout-margin($i, bottom,true,'gt-md');
+    @include layout-margin($i, left,true, 'gt-md');
+    @include layout-margin($i, right, true, 'gt-md');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'gt-md');
+    @include layout-padding($i, bottom, true, 'gt-md');
+    @include layout-padding($i, left, true, 'gt-md');
+    @include layout-padding($i, right,true, 'gt-md');
+  }
+  @include responsive-hidden('.hidden--gt-md');
+}
+
+//layout-lt-md
+@media (max-width: $screen-desktop-breakpoint - 1px) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'lt-md');
+    @include layout-margin($i, bottom,true,'lt-md');
+    @include layout-margin($i, left,true, 'lt-md');
+    @include layout-margin($i, right, true, 'lt-md');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'lt-md');
+    @include layout-padding($i, bottom, true, 'lt-md');
+    @include layout-padding($i, left, true, 'lt-md');
+    @include layout-padding($i, right,true, 'lt-md');
+  }
+  @include responsive-hidden('.hidden--lt-md');
+}
+
+//layout-lg
+@media (min-width: $screen-desktop-breakpoint) and (max-width: $screen-large-desktop-breakpoint - 1px) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'lg');
+    @include layout-margin($i, bottom,true,'lg');
+    @include layout-margin($i, left,true, 'lg');
+    @include layout-margin($i, right, true, 'lg');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'lg');
+    @include layout-padding($i, bottom, true, 'lg');
+    @include layout-padding($i, left, true, 'lg');
+    @include layout-padding($i, right,true, 'lg');
+  }
+  @include responsive-hidden('.hidden--lg');
+}
+
+//layout-gt-lg
+@media (min-width: $screen-large-desktop-breakpoint) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'gt-lg');
+    @include layout-margin($i, bottom,true,'gt-lg');
+    @include layout-margin($i, left,true, 'gt-lg');
+    @include layout-margin($i, right, true, 'gt-lg');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'gt-lg');
+    @include layout-padding($i, bottom, true, 'gt-lg');
+    @include layout-padding($i, left, true, 'gt-lg');
+    @include layout-padding($i, right,true, 'gt-lg');
+  }
+  @include responsive-hidden('.hidden--gt-lg');
+}
+
+//layout-lt-lg
+
+@media (max-width: $screen-large-desktop-breakpoint - 1px) {
+  @for $i from 1 to 4 {
+    @include layout-margin($i, top, true,'lt-lg');
+    @include layout-margin($i, bottom,true,'lt-lg');
+    @include layout-margin($i, left,true, 'lt-lg');
+    @include layout-margin($i, right, true, 'lt-lg');
+  }
+  @for $i from 1 to 4 {
+    @include layout-padding($i, top, true, 'lt-lg');
+    @include layout-padding($i, bottom, true, 'lt-lg');
+    @include layout-padding($i, left, true, 'lt-lg');
+    @include layout-padding($i, right,true, 'lt-lg');
+  }
+  @include responsive-hidden('.hidden--lg');
+}
+.no-min-width{
+  min-width: 0 !important;
+}

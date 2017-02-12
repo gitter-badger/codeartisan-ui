@@ -1,0 +1,15 @@
+@import "color-theme";
+
+// ==========  Drawer  ========== //
+
+$layout-drawer-bg-color: unquote("rgb(#{$color-white})") !default;
+$layout-drawer-bg-dark-color: unquote("rgb(#{$palette-blue-grey-900})") !default;
+$layout-drawer-border-color: unquote("rgb(#{$palette-grey-300})") !default;
+$layout-text-color: unquote("rgb(#{$palette-grey-800})") !default;
+$layout-text-light-color: unquote("rgb(#{$color-white})") !default;
+$layout-drawer-navigation-color: unquote("rgba(#{$color-black},.87)") !default;
+$layout-drawer-dark-navigation-color: unquote("rgb(#{$color-white})") !default;
+$layout-drawer-navigation-icon-color: unquote("rgba(#{$color-black},.54)") !default;
+$layout-drawer-dark-navigation-icon-color: unquote("rgba(#{$color-white},.70)") !default;
+$layout-drawer-navigation-link-active-background: unquote("rgb(#{$palette-grey-50})") !default;
+$layout-drawer-navigation-link-active-color: unquote("rgb(#{$color-primary})") !default;

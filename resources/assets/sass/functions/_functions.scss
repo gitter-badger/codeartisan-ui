@@ -1,0 +1,10 @@
+@import "../variables/variables";
+
+@function calc-grid-column($i){
+  @if(($grid-max-columns - $i) == 0){
+    @return percentage(1);
+  }
+  @else{
+    @return (100% - percentage(($grid-max-columns - $i)/$grid-max-columns));
+  }
+}

@@ -1,0 +1,303 @@
+@import "../variables/variables";
+@import "../mixins/mixins";
+html, body {
+  font-family: $preferred_font;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  color:unquote("rgb(#{$body-color})");
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  font-size: 13px;
+  line-height: 16px;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  @include typo-display-3($colorContrast: true);
+
+  font-size: 0.6em;
+}
+
+h1 {
+  @include typo-display-3;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  @include typo-display-2;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+h3 {
+  @include typo-display-1;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+h4 {
+  @include typo-headline;
+
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+h5 {
+  @include typo-title;
+
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+h6 {
+  @include typo-subhead;
+
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 4px;
+  .md-card &{
+    margin-bottom: 0;
+    margin-top: 0;
+    color: rgba(0,0,0,.54);
+  }
+}
+
+a {
+  color:  unquote("rgb(#{$color-accent})") ;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+blockquote {
+  @include typo-blockquote;
+}
+
+mark {
+  background-color: #f4ff81;
+}
+
+dt {
+  font-weight: 700;
+}
+
+address {
+  @include typo-caption;
+
+  font-style: normal;
+}
+
+ul, ol {
+  @include typo-body-1;
+}
+
+/**
+ * Class Name Styles
+ */
+
+.md-typography--display-4 {
+  @include typo-display-4;
+}
+
+.md-typography--display-4-color-contrast {
+  @include typo-display-4($colorContrast: true);
+}
+
+.md-typography--display-3 {
+  @include typo-display-3;
+}
+
+.md-typography--display-3-color-contrast {
+  @include typo-display-3($colorContrast: true);
+}
+
+.md-typography--display-2 {
+  @include typo-display-2;
+}
+
+.md-typography--display-2-color-contrast {
+  @include typo-display-2($colorContrast: true);
+}
+
+.md-typography--display-1 {
+  @include typo-display-1;
+}
+
+.md-typography--display-1-color-contrast {
+  @include typo-display-1($colorContrast: true);
+}
+
+.md-typography--headline {
+  @include typo-headline;
+}
+
+.md-typography--headline-color-contrast {
+  @include typo-headline($colorContrast: true);
+}
+
+.md-typography--title {
+  @include typo-title;
+}
+
+.md-typography--title-color-contrast {
+  @include typo-title($colorContrast: true);
+}
+
+.md-typography--subhead {
+  @include typo-subhead;
+}
+
+.md-typography--subhead-color-contrast {
+  @include typo-subhead($colorContrast: true);
+}
+
+.md-typography--body-2 {
+  @include typo-body-2;
+}
+
+.md-typography--body-2-color-contrast {
+  @include typo-body-2($colorContrast: true);
+}
+
+.md-typography--body-1 {
+  @include typo-body-1;
+}
+
+.md-typography--body-1-color-contrast {
+  @include typo-body-1($colorContrast: true);
+}
+
+.md-typography--body-2-force-preferred-font {
+  @include typo-body-2($usePreferred: true);
+}
+
+.md-typography--body-2-force-preferred-font-color-contrast {
+  @include typo-body-2($colorContrast: true, $usePreferred: true);
+}
+
+.md-typography--body-1-force-preferred-font {
+  @include typo-body-1($usePreferred: true);
+}
+
+.md-typography--body-1-force-preferred-font-color-contrast {
+  @include typo-body-1($colorContrast: true, $usePreferred: true);
+}
+
+.md-typography--caption {
+  @include typo-caption;
+}
+
+.md-typography--caption-force-preferred-font {
+  @include typo-caption($usePreferred: true);
+}
+
+.md-typography--caption-color-contrast {
+  @include typo-caption($colorContrast: true);
+}
+
+.md-typography--caption-force-preferred-font-color-contrast {
+  @include typo-caption($colorContrast: true, $usePreferred: true);
+}
+
+.md-typography--menu {
+  @include typo-menu;
+}
+
+.md-typography--menu-color-contrast {
+  @include typo-menu($colorContrast: true);
+}
+
+.md-typography--button {
+  @include typo-button;
+}
+
+.md-typography--button-color-contrast {
+  @include typo-button($colorContrast: true);
+}
+
+.md-typography--text-left, .text-left {
+  text-align: left;
+}
+
+.md-typography--text-right, .text-right {
+  text-align: right;
+}
+
+.md-typography--text-center, .text-center {
+  text-align: center;
+}
+
+.md-typography--text-justify, .text-justify {
+  text-align: justify;
+}
+
+.md-typography--text-nowrap {
+  white-space: nowrap;
+}
+
+.md-typography--text-lowercase {
+  text-transform: lowercase;
+}
+
+.md-typography--text-uppercase {
+  text-transform: uppercase;
+}
+
+.md-typography--text-capitalize {
+  text-transform: capitalize;
+}
+
+.md-typography--font-thin {
+  font-weight: 200 !important;
+}
+
+.md-typography--font-light {
+  font-weight: 300 !important;
+}
+
+.md-typography--font-regular {
+  font-weight: 400 !important;
+}
+
+.md-typography--font-medium {
+  font-weight: 500 !important;
+}
+
+.md-typography--font-bold {
+  font-weight: 700 !important;
+}
+
+.md-typography--font-black {
+  font-weight: 900 !important;
+}
+blockquote {
+  font-family: $preferred_font;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+}
+q{
+  font-style: italic;
+}
+.md-typography--small-font{
+  @include typo-small($colorContrast: false);
+}
+.md-typography--subtext-color{
+  opacity: .54;
+}

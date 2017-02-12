@@ -1,0 +1,16 @@
+@import "color-theme";
+
+// ==========  Header  ========== //
+
+$layout-header-bg-color: unquote("rgb(#{$color-primary})") !default;
+$layout-header-nav-hover-color: unquote("rgba(#{$color-primary-hue-1}, 1)") !default;
+$layout-header-tab-text-color: unquote("rgba(#{$color-primary-contrast}, 0.6)") !default;
+$layout-header-text-color: unquote("rgba(#{$color-white}, 0.54)") !default;
+$layout-header-drawer-button-color: unquote("rgba(#{$color-white}, 1)") !default;
+$layout-header-active-text-color: unquote("rgb(#{$color-white})") !default;
+
+$layout-header-invert-bg-color: unquote("rgb(#{$color-primary})") !default;
+$layout-header-invert-text-color: unquote("rgba(#{$color-white}, 0.54)") !default;
+$layout-header-invert-drawer-button-color: unquote("rgba(#{$color-white}, 1)") !default;
+$layout-header-invert-active-text-color: unquote("rgb(#{$color-white})") !default;
+

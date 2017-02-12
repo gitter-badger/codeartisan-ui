@@ -1,0 +1,32 @@
+@mixin layout-margin($margin-unit, $direction, $useBreakpoint: false, $breakpointType:'sm'){
+  @if($useBreakpoint){
+    .layout-m-#{str-slice($direction, 1, 1)}-#{$margin-unit}--#{$breakpointType} {
+      margin-#{$direction}: $margin-unit*(16px) !important;
+    }
+  }
+  @else{
+    .layout-m-#{str-slice($direction, 1, 1)}-#{$margin-unit} {
+      margin-#{$direction}: $margin-unit*(16px)  - ($margin-unit - 1)*(8px) !important;
+    }
+  }
+}
+@mixin layout-padding($margin-unit, $direction, $useBreakpoint: false, $breakpointType: 'sm'){
+  @if($useBreakpoint){
+    .layout-p-#{str-slice($direction, 1, 1)}-#{$margin-unit}--#{$breakpointType} {
+      padding-#{$direction}: $margin-unit*(16px) !important;
+    }
+  }
+  @else{
+    .layout-p-#{str-slice($direction, 1, 1)}-#{$margin-unit} {
+      padding-#{$direction}: $margin-unit*(16px) !important;
+    }
+  }
+}
+
+//responsive-hidden
+@mixin responsive-hidden($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}
+

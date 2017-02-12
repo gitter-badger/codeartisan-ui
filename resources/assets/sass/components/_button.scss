@@ -431,8 +431,8 @@
   &:hover{
     background: none;
     text-decoration: underline;
+    }
   }
-}
 
   &--profile{
     width:$button-fab-size-mini;
@@ -440,14 +440,13 @@
     min-width: 0;
     border-radius: 50%;
     padding: 0;
-    margin: 0 4px;
     background-position: center;
     background-size: cover;
     text-align: center;
     line-height: $button-fab-size-mini;
     font-size: 24px;
     font-weight: 500;
-    background-color: unquote("rgba(#{$color-accent}, 1)");
+    background-color: unquote("rgba(#{$palette-grey-500}, 1)");
     &:hover,&:active,&:focus{
       background-color: unquote("rgba(#{$color-accent}, 1)") !important;
     }

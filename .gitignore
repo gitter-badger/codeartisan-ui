@@ -2,3 +2,5 @@
 .idea/
 mix-manifest.json
 package.json
+#stop tracking changes from webpack.mix.js
+webpack.mix.js

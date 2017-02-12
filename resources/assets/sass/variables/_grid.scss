@@ -1,0 +1,41 @@
+
+// ==========  Grid  ========== //
+
+$screen-phone-breakpoint: 600px !default;
+$screen-tablet-breakpoint: 960px !default;
+$screen-desktop-breakpoint: 1280px !default;
+$screen-large-desktop-breakpoint: 1920px !default;
+
+$xs-breakpoint: 480px !default;
+$sm-breakpoint: 600px !default;
+$grid-tablet-breakpoint : 600px !default;
+$grid-desktop-breakpoint : 960px !default;
+$grid-large-desktop-breakpoint : 600px !default;
+$md-breakpoint:1200px !default;
+
+$lg-breakpoint: 1440px !default;
+
+$grid-columns:               12 !default;
+$grid-gutter-width:          32px !default; // 32px
+
+
+$grid-desktop-columns: 12 !default;
+$grid-desktop-gutter: 24px !default;
+$grid-desktop-margin: 24px !default;
+$grid-has-tile-margin: 8px !default;
+
+$grid-desktop-breakpoint: $md-breakpoint;
+$grid-large-desktop-breakpoint: $lg-breakpoint;
+
+$grid-tablet-columns: 8 !default;
+$grid-tablet-gutter: 16px !default;
+$grid-tablet-margin: 16px !default;
+
+$grid-tablet-breakpoint: $sm-breakpoint;
+
+$grid-phone-columns: 4 !default;
+$grid-phone-gutter: 16px !default;
+$grid-phone-margin: 16px !default;
+
+$grid-cell-default-columns: $grid-phone-columns !default;
+$grid-max-columns: $grid-desktop-columns !default;

@@ -1,0 +1,17 @@
+@import "color-theme";
+
+// ==========  Footer  ========== //
+
+$footer-min-padding: 16px !default;
+$footer-padding-sides: 40px !default;
+$footer-heading-font-size: 14px !default;
+$footer-heading-line-height: (1.7 * $footer-heading-font-size) !default;
+$footer-btn-size: 36px  !default;
+
+$footer-bg-color: unquote("rgb(#{$color-white})") !default;
+$footer-color: unquote("rgb(#{$color-black})") !default;
+$footer-heading-color: unquote("rgb(#{$color-black})") !default;
+$footer-button-fill-color: $footer-color !default;
+$footer-underline-color: $footer-color !default;
+
+$input-text-bottom-border-color-light: unquote("rgb(#{$color-black})") !default;

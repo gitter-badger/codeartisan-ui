@@ -1,11 +1,17 @@
 // Variables and mixins
 @import "variables/variables";
 @import "mixins/mixins";
+@import "functions/functions";
 
 // Resets and dependencies
 @import "resets/resets";
 @import "typography/typography";
 
+// Helper classes
+@import "helpers/helpers";
+
+// Layout
+@import "layout/layout";
 
 // Components
 @import "components/palette";

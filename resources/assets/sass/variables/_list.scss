@@ -1,0 +1,7 @@
+@import "color-theme";
+
+// ==========  List ========== */
+
+$list-container-item-border-color: unquote("rgb(#{$palette-grey-300})") !default;
+$list-container-view-background: unquote("rgb(#{$color-white})") !default;
+$list-supporting-text-text-color: unquote("rgba(#{$color-black}, 0.54)") !default;
