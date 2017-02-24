@@ -1,0 +1,169 @@
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// ==========  Tab   ========== //
+
+.md-tabs {
+  display: block;
+  width: 100%;
+}
+.md-tabs__tab-bar {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center; // ⇾
+  align-content   : space-between; // ||
+  align-items     : flex-start; // ↓
+
+  height          : 48px;
+  position: relative;
+  padding         : 0 0 0 0;
+  margin          : 0;
+  border-bottom   : 1px solid $tab-border-color;
+  font-family: Roboto, Arial, sans-serif;
+  &.border-top{
+    border-top   : 1px solid $tab-border-color;
+  }
+}
+.md-tabs__ink-bar{
+  height: 2px;
+  width: 100px;
+  display: block;
+  content: " ";
+  bottom: 0;
+  left:0;
+  position: absolute;
+  background: $tab-highlight-color;
+
+  .md-tabs.is-animating &{
+    transition: transform 0.2s cubic-bezier(0.4, 0.0, 1, 1);
+  }
+}
+
+.md-tabs__tab {
+  margin: 0;
+  border: none;
+  padding: 0 24px 0 24px;
+
+  float: left;
+  position: relative;
+  display: block;
+
+  text-decoration: none;
+  height: 48px;
+  line-height: 48px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: $layout-tab-font-size;
+  text-transform: uppercase;
+
+  color: $tab-text-color;
+  overflow: hidden;
+
+  .md-tabs  &.is-active,
+  .md-tabs  &:hover {
+    color: $tab-active-text-color;
+    transition: color 0.2s cubic-bezier(0.4, 0.0, 1, 1);
+  }
+
+  & .md-tabs__ripple-container {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+
+    & .md-ripple {
+      background: $tab-highlight-color;
+    }
+  }
+  img {
+    width: 24px;
+    height: auto;
+  }
+}
+
+.md-tabs__tab-bar--has-title{
+  position: relative;
+}
+.md-tabs__tab-bar--left{
+  justify-content : flex-start; // <-
+}
+.md-tabs__tab-bar--right{
+  justify-content : flex-end; // <-
+}
+.md-tabs__tab--light{
+  color: rgba(255,255,255,.50);
+  &.is-active{
+    color: rgba(255,255,255,1);
+  }
+  .md-tabs  &.is-active,
+  .md-tabs  &:hover {
+    color: $tab-light-active-text-color;
+  }
+  &.is-active::after{
+    background: #FFF !important;
+  }
+}
+.md-tabs__tab--white{
+  background-color: #FFF;
+  color: rgba(0,0,0,.50);
+}
+.md-tabs__tab--diff{
+  &.is-active{
+    color: rgba(0,0,0,1);
+  }
+  .md-tabs  &.is-active,
+  .md-tabs  &:focus,
+  .md-tabs  &:hover {
+    color: unquote("rgb(#{$color-primary})");
+  }
+  .md-tabs  &.is-active:after,
+  .md-tabs  &:hover:after {
+    background: unquote("rgb(#{$color-primary})");
+  }
+}
+.md-tabs__tab--grey{
+  padding: 0 8px;
+  .md-tabs  &:focus,
+  .md-tabs  &:hover {
+    color: $button-primary-color;
+  }
+  .md-tabs  &:hover:after {
+    background: $button-primary-color;
+  }
+}
+.md-tabs--stretch{
+  & .md-tabs__tab-bar{
+    flex-grow: 1;
+  }
+  & .md-tabs__tab{
+    flex:1 1 0;
+    text-align: center;
+  }
+}
+.md-tabs__tab--title{
+  position: absolute;
+  top:0;
+  left:0;
+  font-weight: 700;
+}
+.md-tabs__panel {
+  display: block;
+  width: 100%;
+}
+
+.md-tabs__wrapper-outer{
+  width: 100%;
+  overflow-x: hidden;
+}
+.md-tabs__wrapper-inner{
+  display: flex;
+  flex-direction: row;
+  .md-tabs.is-animating &{
+    transition: transform 0.2s cubic-bezier(0.4, 0.0, 1, 1);
+  }
+}

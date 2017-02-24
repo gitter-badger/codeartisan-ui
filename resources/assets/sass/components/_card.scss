@@ -2,11 +2,7 @@
 @import "../mixins/mixins";
 // ==========  Card   ========== //
 // Card Block
-a {
-  color: rgb(120,144,156);
-  font-weight: 500;
-  text-decoration: none;
-}
+
 .md-card {
   margin-bottom: 24px;
   display: flex;
@@ -265,6 +261,9 @@ a {
     &:last-child{
       margin-right: 0;
     }
+    &.md-button--icon{
+      color: unquote("rgba(#{$color-black},.54)");
+    }
   }
 
   &.md-card--border {
@@ -344,7 +343,7 @@ a {
   will-change: tranform;
 }
 
-[aria-expanded="true"] .md-animation-collapse{
+[aria-expanded="true"].md-animation-collapse{
   transform: rotate(180deg);
 }
 
@@ -469,4 +468,8 @@ a {
   padding: $card-header-padding;
   display: flex;
   flex-direction: row;
+}
+//wrap the content
+.md-card__content-wrapper{
+  height:0;
 }

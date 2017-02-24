@@ -1,0 +1,17 @@
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// ==========  Expand   ========== //
+
+.md-expand{
+  overflow: hidden;
+  &.is-upgraded{
+    display: none;
+    &.is-visible{
+      display: block;
+    }
+  }
+}
+.md-expand__wrapper{
+  transition: margin 0.4s ease;
+}

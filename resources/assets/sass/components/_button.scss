@@ -190,6 +190,12 @@
         background: $button-accent-color;
         color: $button-accent-color-txt;
       }
+      &.md-button--primary{
+        border-color: $button-primary-color;
+      }
+      &.md-button--accent{
+        border-color: $button-accent-color;
+      }
       [data-theme="dark"] &{
         border-color: $button-accent-color;
         &:hover, &:focus:not(:active),&:active {
