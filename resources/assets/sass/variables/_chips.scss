@@ -1,0 +1,11 @@
+@import "color-theme";
+
+// ==========  Chips  ========== //
+
+$chips-font-size: 16px !default;
+$chips-color: unquote("rgb(#{$palette-grey-800})") !default;
+$chips-remove-background: unquote("rgb(#{$palette-grey-500})") !default;
+$chips-background: unquote("rgb(#{$palette-grey-300})")!default;
+$chips-background-inverse: unquote("rgba(#{$color-accent-contrast},0.2)") !default;
+$chips-size : 22px !default;
+$chips-padding: 12px !default;

@@ -86,6 +86,10 @@ blockquote {
   @include typo-blockquote;
 }
 
+strong{
+  font-weight: 500;
+}
+
 mark {
   background-color: #f4ff81;
 }
