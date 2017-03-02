@@ -6,6 +6,9 @@ $data-table-font-size: 13px !default;
 $data-table-header-font-size: 14px !default;
 $data-table-header-sort-icon-size: 16px !default;
 
+$data-table-background-color: unquote("rgb(#{$color-white})")  !default;
+$data-table-dark-background-color: unquote("rgb(#{$palette-grey-800})")  !default;
+
 $data-table-header-color: rgba(#000, 0.87)  !default;
 $data-table-dark-header-color: rgba(#fff, 1)  !default;
 $data-table-header-sorted-color: rgba(#000, 0.87) !default;

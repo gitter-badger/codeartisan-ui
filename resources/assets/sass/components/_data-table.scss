@@ -1,0 +1,173 @@
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+// ==========  Data Table   ========== //
+
+.md-data-table {
+  position: relative;
+  border: $data-table-dividers;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: $data-table-font-size;
+  background-color: $data-table-background-color;
+  min-width: 100%;
+
+  thead {
+    padding-bottom: 3px;
+
+    .md-data-table__select {
+      margin-top: 0;
+    }
+    &.md-data-table--accent{
+      background-color: unquote("rgb(#{$color-accent})");
+      tr {
+        th{
+          color: unquote("rgba(#{$color-accent-contrast},0.84)");
+        }
+      }
+    }
+    &.md-data-table--primary{
+      background-color: unquote("rgb(#{$color-primary})");
+      tr {
+        th{
+          color: unquote("rgba(#{$color-primary-contrast},0.84)");
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      position: relative;
+      height: $data-table-row-height;
+      white-space: normal;
+      @include material-animation-default(0.28s);
+      transition-property: background-color;
+
+      &.is-selected {
+        background-color: $data-table-selection-color;
+      }
+
+      &:hover {
+        background-color: $data-table-hover-color;
+      }
+    }
+  }
+
+  td, th {
+    padding: 0 $data-table-column-padding 0 $data-table-column-padding;
+
+    &:first-of-type {
+      padding-left: 24px;
+    }
+
+    &:last-of-type {
+      padding-right: 24px;
+    }
+  }
+
+  td {
+    position: relative;
+    vertical-align: top;
+    height: $data-table-row-height;
+    border-top: $data-table-dividers;
+    border-bottom: $data-table-dividers;
+    padding-top: $data-table-cell-top;
+    box-sizing: border-box;
+
+    .md-data-table__select {
+      vertical-align: top;
+      position: absolute;
+      left: 24px;
+    }
+  }
+
+  th {
+    position: relative;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    height: $data-table-row-height;
+    font-size: $data-table-header-font-size;
+    color: $data-table-header-color;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+    line-height: $data-table-header-line-height;
+    &.md-data-table__select {
+      position: absolute;
+      bottom: 8px;
+      left: 24px;
+    }
+
+    &.md-data-table__header--sorted-ascending,
+    &.md-data-table__header--sorted-descending {
+      color: $data-table-header-sorted-color;
+
+      cursor: pointer;
+      &:after {
+        font-size: $data-table-header-sort-icon-size;
+        margin-left: 4px;
+        @include typo-icon;
+      }
+    }
+
+    &.md-data-table__header--sorted-ascending:after {
+      content: "\f176";
+    }
+
+    &.md-data-table__header--sorted-descending:after {
+      content: "\f175";
+    }
+  }
+
+  &--strip{
+    tbody{
+      tr:nth-of-type(2n){
+        background-color: $data-table-selection-color;
+      }
+    }
+  }
+}
+
+.md-data-table--dark {
+  background-color: $data-table-dark-background-color;
+  color: $data-table-dark-header-color;
+
+  thead {
+    &.md-data-table--primary{
+      background-color: unquote("rgb(#{$color-primary})");
+      tr {
+        th{
+          color: unquote("rgba(#{$color-primary-contrast},0.84)");
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &.is-selected {
+        background-color: $data-table-dark-selection-color;
+      }
+
+      &:hover {
+        background-color: $data-table-dark-hover-color;
+      }
+    }
+  }
+
+  th {
+    color: $data-table-dark-header-color;
+    &.md-data-table__header--sorted-ascending,
+    &.md-data-table__header--sorted-descending {
+      color: $data-table-dark-header-sorted-color;
+    }
+  }
+
+  &.md-data-table--strip{
+    tbody{
+      tr:nth-of-type(2n){
+        background-color: $data-table-dark-selection-color;
+      }
+    }
+  }
+}
